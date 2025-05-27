@@ -1,1 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Channel Koay - Biodata</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
 
+      .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #004080;
+    margin: 20px 0;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 40px; /* Added to give space for the sticky header */
+  }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f7fa; /* Soft blue-gray background */
+      color: #2d3748; /* Dark gray-blue text */
+      line-height: 1.6;
+    }
+
+    header {
+      background: #2b6cb0; /* Rich professional blue */
+      color: #fff;
+      padding: 20px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: #ebf8ff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      font-size: 15px;
+      padding: 5px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #bee3f8;
+      border-bottom-color: #90cdf4;
+    }
+
+    section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 80px 40px;
+      background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: #2b6cb0;
+      margin-bottom: 15px;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #4a5568;
+      max-width: 600px;
+    }
+
+    h3 {
+      font-size: 28px;
+      color: #2b6cb0;
+      margin-bottom: 25px;
+      font-weight: 600;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    h3::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 3px;
+      background: #4299e1;
+    }
+
+    h4 {
+      font-size: 20px;
+      color: #3182ce;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info-grid div {
+      background: #ebf8ff;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #4299e1;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .info-grid div:hover {
+      transform: translateY(-3px);
+    }
+
+    .skills ul, .projects ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 12px;
+      padding: 0;
+    }
+
+    .skills li, .projects li {
+      background: #bee3f8;
+      padding: 12px 15px;
+      border-radius: 6px;
+      text-align: center;
+      transition: all 0.3s ease;
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .skills li:hover, .projects li:hover {
+      transform: translateY(-3px);
+      background: #90cdf4;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 12px 15px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s;
+    }
+
+    .contact input:focus, .contact textarea:focus {
+      outline: none;
+      border-color: #4299e1;
+      box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+    }
+
+    .contact button {
+      background: #3182ce;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-size: 16px;
+    }
+
+    .contact button:hover {
+      background: #2b6cb0;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #2b6cb0;
+      color: #ebf8ff;
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    a {
+      color: #3182ce;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    a:hover {
+      color: #2b6cb0;
+      text-decoration: underline;
+    }
+
+    strong {
+      color: #2c5282;
+      font-weight: 600;
+    }
+
+    em {
+      color: #4a5568;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        text-align: center;
+      }
+      
+      nav {
+        margin-top: 10px;
+      }
+      
+      nav a {
+        margin: 0 10px;
+      }
+      
+      section {
+        padding: 40px 20px;
+      }
+      
+      .hero {
+        padding: 60px 20px;
+      }
+    }
+</style>
+</head>
+<body>
+
+  <header>
+    <h1>Channel Koay - Biodata</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Hi, I'm Channel Koay</h2>
+    <p>Computer Engineering Student | Universiti Malaysia Perlis (UniMAP)</p>
+  </section>
+
+<!-- Modified About Me section -->
+<section id="about">
+  <h3>About Me</h3>
+  <div style="display: flex; flex-direction: column; align-items: center;">
+    <img src="suit photo.jpg" alt="Channel Koay" class="profile-img">
+    <p style="max-width: 800px; text-align: center;">Computer Engineering student with a 3.30 CGPA and practical experience in FPGA technologies, and IoT. Skilled in Verilog and data structures, with a drive to apply technical knowledge to real-world engineering challenges and smart system innovations.</p>
+  </div>
+  <br />
+  <div class="info-grid">
+    <div><strong>Full Name:</strong> Channel Koay</div>
+    <div><strong>Current CGPA:</strong> 3.30</div>
+    <div><strong>Email:</strong> s221021261@studentmail.unimap.edu.my</div>
+    <div><strong>Phone:</strong> +6016-530 6744</div>
+  </div>
+</section>
+
+  <section id="education">
+    <h3>Education</h3>
+    <div class="info-grid">
+      <div>
+        <strong>2022 - Present:</strong><br />
+        Bachelor of Computer Engineering with Honours<br />
+        Universiti Malaysia Perlis (UniMAP), Perlis, Malaysia<br />
+        Current CGPA: 3.30
+      </div>
+      <div>
+        <strong>Current Courses:</strong><br />
+        • Embedded System Design<br />
+        • Principle of Computer Architecture<br />
+        • Integrated Design Project
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h3>Experience</h3>
+    <div class="info-grid">
+      <div>
+        <strong>9/2022 - 11/2022:</strong><br />
+        <em>Server</em><br />
+        Richard Rivalee Nyonya Cuisine, Penang, Malaysia<br />
+        • Taking orders from restaurant patrons and delivering their food
+      </div>
+      <div>
+        <strong>8/2024 - 10/2024:</strong><br />
+        <em>Courier Sender</em><br />
+        Lalamove Courier Service, Penang, Malaysia<br />
+        • Accept order from phone and delivering it
+      </div>
+      <div>
+        <strong>2/2025 - 4/2025:</strong><br />
+        <em>Driver</em><br />
+        Grab Driver, Penang, Malaysia<br />
+        • Fetch customer to destination while keeping communicating
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h3>Skills</h3>
+    <h4>Programming Languages:</h4>
+    <ul>
+      <li>C</li>
+      <li>Java</li>
+      <li>Python</li>
+      <li>Verilog HDL</li>
+      <li>8085 Assembly</li>
+      <li>MyRIO</li>
+      <li>C#</li>
+      <li>HTML</li>
+    </ul>
+    
+    <h4 style="margin-top: 20px;">Softwares:</h4>
+    <ul>
+      <li>Code::Blocks</li>
+      <li>Altera Quartus Prime</li>
+      <li>Apache NetBeans IDE</li>
+      <li>Arduino IDE</li>
+      <li>LTSpice</li>
+      <li>SciLab</li>
+      <li>WireShark</li>
+      <li>BASIC CHATBOT</li>
+    </ul>
+    
+    <h4 style="margin-top: 20px;">Soft Skills:</h4>
+    <ul>
+      <li>Teamwork</li>
+      <li>Communication</li>
+      <li>Time Management</li>
+      <li>Leadership</li>
+      <li>Analytical Thinking</li>
+      <li>Machine Learning</li>
+    </ul>
+    
+    <h4 style="margin-top: 20px;">Languages:</h4>
+    <ul>
+      <li>English (Advanced)</li>
+      <li>Mandarin (Advanced)</li>
+      <li>Malay (Intermediate)</li>
+      <li>Japanese (Basic)</li>
+    </ul>
+  </section>
+
+  <section id="projects" class="projects">
+    <h3>Projects & Achievements</h3>
+    <div class="info-grid">
+      <div>
+        <strong>Configurable Frequency Divider</strong><br />
+        <em>DE10 Lite, FPGA, Verilog</em><br />
+        Year 2 Semester 1, 2022/2023<br />
+        • Created a configurable frequency divider capable of adjusting duty cycle of an input clock signal by creating a FSM with 6 states in Verilog.
+      </div>
+      <div>
+        <strong>Digital Security Lock</strong><br />
+        <em>MY1SIM 85</em><br />
+        Year 2 Semester 2, 2022/2023<br />
+        • Used check function to verify password correctness using MY1SIM features like 7SEGMENT BOARD, BUTTON, KEYPAD, SIMPLE INTERRUPT (RST5.5).
+      </div>
+      <div>
+        <strong>Wireless Smart Temperature Sensor</strong><br />
+        <em>MyRIO</em><br />
+        Year 3 Semester 1, 2023/2024<br />
+        • Measured temperature using thermistor NTC, op-amp and voltage divider to configure an accurate thermometer with wifi capability.
+      </div>
+      <div>
+        <strong>Awards & Certifications</strong><br />
+        • Completed Cisco's Introduction to Modern AI course (2/2025 - 3/2025)<br />
+        • UniMAP Taekwon-do WTF Extracurricular Member (11/2022 - 7/2023)<br />
+        • UniMAP Cekal Cemerlang Optimum (UCCO) Vice Secretary (11/2023 - 11/2024)
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h3>Contact Me</h3>
+    <div class="info-grid">
+      <div>
+        <strong>Phone:</strong><br />
+        📞 <a href="tel:+60165306744">+60 16-530 6744</a>
+      </div>
+      <div>
+        <strong>Email:</strong><br />
+        📧 <a href="mailto:s221021261@studentmail.unimap.edu.my">s221021261@studentmail.unimap.edu.my</a>
+      </div>
+      <div>
+        <strong>LinkedIn:</strong><br />
+        🔗 <a href="https://www.linkedin.com/in/channel-koay-b08b34339/" target="_blank">linkedin.com/in/channel-koay</a>
+      </div>
+      <div>
+        <strong>Requested Work Period:</strong><br />
+        📅 28 July 2025 - 10 October 2025 (2 Month/10 Weeks)
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Channel Koay | All rights reserved.
+  </footer>
+
+</body>
+</html>
